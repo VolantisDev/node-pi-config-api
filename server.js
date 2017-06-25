@@ -37,6 +37,18 @@ app.post('/api/hostname', (request, response) => {
   })
 })
 
+app.get('/api/wifi/getInterface', (request, response) => {
+  wifiManager.get_wifi_interface((error, wifi_interface) => {
+    if (error) {
+      console.log('ERROR: Could not get wifi interface. ' + error)
+      response.send({ status: 'ERROR', error: error })
+    } else {
+      console.log('SUCCESS: Found wifi interface ' + wifi_interface)
+      response.send({ status: 'SUCCESS', wifi_interface: wifi_interface })
+    }
+  })
+})
+
 app.get('/api/wifi/scan', (request, response) => {
   wifiManager.scan_networks((error, results) => {
     if (error) {
