@@ -1,0 +1,17 @@
+[Unit]
+Description=Pi Config API
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/node {{ install_path }}/server.js
+WorkingDirectory={{ install_path }}
+Restart=on-failure
+RestartSec=30
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pi-config-api
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
