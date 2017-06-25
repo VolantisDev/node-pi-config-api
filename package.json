@@ -1,12 +1,12 @@
 {
   "name": "pi-config-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The standalone API backend for Pi Config",
   "author": "Ben McClure <ben.mcclure@gmail.com>",
   "license": "Unlicense",
   "scripts": {
     "start": "node server.js",
-    "install": "node install.js"
+    "install-service": "node install-service.js"
   },
   "dependencies": {
     "async": "^2.4.1",

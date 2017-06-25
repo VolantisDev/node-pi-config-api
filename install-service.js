@@ -2,6 +2,7 @@ var path = require('path')
 var fs = require('fs')
 var mustache = require('mustache')
 var config = require('./config')
+var async = require('async')
 
 async.waterfall([
   (callback) => {
