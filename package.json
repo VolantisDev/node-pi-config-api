@@ -1,6 +1,6 @@
 {
   "name": "pi-config-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The standalone API backend for Pi Config",
   "author": "Ben McClure <ben.mcclure@gmail.com>",
   "license": "Unlicense",
@@ -15,7 +15,7 @@
     "flatconfig": "^0.4.4",
     "hostnamectl": "^0.1.1",
     "mustache": "^2.3.0",
-    "wifi-manager": "^0.0.17"
+    "wifi-manager": "0.0.18"
   },
   "devDependencies": {},
   "engines": {

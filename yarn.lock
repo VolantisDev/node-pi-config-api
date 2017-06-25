@@ -307,9 +307,9 @@ vary@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.1.tgz#67535ebb694c1d52257457984665323f587e8d37"
 
-wifi-manager@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/wifi-manager/-/wifi-manager-0.0.17.tgz#67a24b0113271a5dd98e59e3c0a13a1dc7ce5d85"
+wifi-manager@0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/wifi-manager/-/wifi-manager-0.0.18.tgz#75503c1c6dcca0f39907bfb7bbf9359fba95b8ac"
   dependencies:
     async "~2.4.1"
     systemctl "~0.1.1"

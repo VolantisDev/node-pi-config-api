@@ -151,6 +151,22 @@ app.post('/api/wifi/delete', (request, response) => {
   })
 })
 
+app.get('/api/wifi/isSaved', (request, response) => {
+  var wifi_interface = request.body.wifi_interface
+  var wifi_ssid = request.body.wifi_ssid
+
+  wifiManager.is_profile_saved(wifi_interface, wifi_ssid, (error, is_saved) => {
+    if (error) {
+      console.log('ERROR: Could not determine if wifi profile is saved. ' + error)
+      response.send({ status: 'ERROR', error: error })
+    } else {
+      var text = is_saved ? 'is saved' : 'is not saved'
+      console.log('SUCCESS: Wifi profile ' + wifi_interface + '-' + wifi_ssid + ' ' + text + '.')
+      response.send({ status: 'SUCCESS', is_saved: is_saved})
+    }
+  })
+})
+
 console.log('> Starting API server...')
 
 console.log('> Listening at ' + config.server.address + ':' + config.server.port)
